@@ -1,0 +1,50 @@
+# 05. 흐름제어와 논리연산자
+- **흐름제어** : 반복문, 함수 등에서 코드 흐름을 제어
+
+## 흐름제어 키워드
+### return
+- '함수를 종료'하고 값을 '반환'하는 역할
+
+### break
+- 반복문 내의 구문이 실행되는 중간에 즉시 반복문을 '종료'하고 다음 구문으로 넘어가는 역할
+
+### continue
+- 다음 반복조건으로 즉시 넘어가는 역할
+
+```{.kotlin}
+fun main() {
+    for (i in 1..10) {
+        if (i == 3) break
+        println(i)
+    }
+
+    for (i in 1..10) {
+        if (i == 3) continue
+        println(i)
+    }
+}
+```
+
+## 논리연산자 (Logical Operator)
+- 논리값을 연산하여 새로운 논리값을 도출할 때 사용
+- **&&** : and 연산자. 앞 과 뒤의 논리값이 둘 다 true인 경우, 결과값이 true
+- **||** : or 연산자. 앞 과 뒤의 논리값이 하나라도 true인 경우, 결과값이 true
+- **!** : not 연산자. 뒤에 붙는 값을 반전
+```{.kotlin}
+fun main() {
+    println (true && false)
+    println (true || false)
+    println (!true)
+    println (!false)
+}
+```
+
+### 조건식에서의 사용
+```{.kotlin}
+fun main() {
+    var a = 6
+    var b = 4
+
+    println (a > 5 && b > 5)
+}
+```
